@@ -1,0 +1,19 @@
+{
+  "name": "react-native-external-display",
+  "version": "0.5.18",
+  "description": "React Native view renderer in External Display",
+  "scripts": {},
+  "author": "Jhen-Jie Hong <developer@jhen.me>",
+  "homepage": "https://github.com/mybigday/react-native-external-display",
+  "repository": "https://github.com/mybigday/react-native-external-display",
+  "keywords": [
+    "react-native",
+    "external-display",
+    "native-module",
+    "native-ui-component",
+    "ios",
+    "android"
+  ],
+  "license": "MIT",
+  "gitHead": "0b996e123adb599f870aa35d5a3b02d9341e50ff"
+}

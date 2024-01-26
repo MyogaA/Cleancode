@@ -1,0 +1,53 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
+/* eslint-disable react-native/no-inline-styles */
+
+import ColorFunctions from "../../Libraries/ColorFunctions";
+
+colorIndex={this.state.colorIndex}
+
+MAIN_THEME_COLOR_SELECT
+
+colorIndex: this.props.colorIndex ? this.props.colorIndex : 0
+
+MAIN_THEME_COLOR_SELECT(this.state.colorIndex)
+
+MAIN_THEME_COLOR_SELECT(this.props.colorIndex)
+
+color: MAIN_TEXT_COLOR_SELECT(this.state.colorIndex)
+
+const barStyle = this.state.colorIndex === 9 ? "dark-content" : "light-content";
+barStyle={barStyle}
+
+
+let whiteColor = WHITE;
+    let blackColor = BLACK;
+
+    if (this.state.colorIndex === 9) {
+      whiteColor = BLACK;
+      blackColor = WHITE;
+    }
+
+    
+ColorFunctions.GetColor(val => {
+  if (val && this.state.colorIndex !== val) {
+    this.setState({ colorIndex: val });
+  }
+});
+
+
+
+
+componentDidUpdate(nextProps) {
+    if (this.props !== nextProps) {
+        ColorFunctions.GetColor(val => {
+          if (val !== 0 && this.state.colorIndex === 0) {
+            this.setState({ colorIndex: val });
+          }
+        });
+      }
+    }
+
+    <Header
+          colorIndex={this.state.colorIndex}
+    ></Header>

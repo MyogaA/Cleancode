@@ -1,0 +1,237 @@
+import React, {Component} from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+  Dimensions,
+  Keyboard,
+  Image as ImageDefault,
+} from 'react-native';
+
+import Header from '../../Components/Header';
+import Button from '../../Components/Button';
+import Image from '../../Components/Image';
+import FloatingTextInput from '../../Components/FloatingTextInput';
+
+import {
+  MAIN_THEME_COLOR,
+  WHITE,
+  BLUE_500,
+  BLUE_700,
+} from '../../Libraries/Colors';
+import MainStyle from '../../Styles';
+import {Actions} from 'react-native-router-flux';
+
+export default class Registration extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      initial: false,
+      login: false,
+      name: '',
+      phone: '',
+      password: '',
+      password2: '',
+    };
+  }
+
+  componentDidMount() {}
+
+  render() {
+    //const {currentTab, changeTabBar} = this.props;
+    //console.log('login props ==> ', this.props);
+    let {width, height} = Dimensions.get('window');
+
+    return (
+      <View style={{flex: 1, backgroundColor: MAIN_THEME_COLOR}}>
+        <StatusBar
+          barStyle="light-content"
+          hidden={false}
+          backgroundColor={MAIN_THEME_COLOR}
+          translucent={false}
+          networkActivityIndicatorVisible={true}
+        />
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+          }}>
+          <ScrollView
+          style={{
+            paddingLeft: 40,
+            marginTop: 0,
+            paddingRight: 40,
+            marginBottom: 0,
+            width: width,
+            height: height,}}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}>
+            <View
+              style={{
+                flex: 0.25,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 20,
+                marginBottom: 20,
+              }}>
+              {/* <View style={{width: '100%', height: 100, }}> */}
+              <Image
+                style={{
+                  width: 250,
+                  height: 100,
+                  //overflow: 'hidden',
+                  //borderRadius: 10,
+                }}
+                resizeMode={'contain'}
+                source={require('../../Images/BeetLogo.png')}
+              />
+              {/* </View> */}
+              <Text
+                style={[
+                  MainStyle.dmSansBold,
+                  {fontSize: 14, color: WHITE},
+                ]}>
+                Registration Form
+              </Text>
+            </View>
+            <View style={{flex: 1, flexDirection: 'column'}}>
+              <View>
+                <Text
+                  style={[
+                    MainStyle.dmSansBold,
+                    {fontSize: 14, color: WHITE},
+                  ]}>
+                  Name
+                </Text>
+              </View>
+              <View>
+                <FloatingTextInput
+                  color="#FFF"
+                  type="text"
+                  refx={q => (this._name = q)}
+                  onSubmitEditing={() => this._phoneNumberText.focus()}
+                  onChangeText={text => this.setState({name: text})}
+                  value={this.state.name}
+                  //keyboardType="email-address"
+                  keyboardType={'default'}
+                  returnKeyType="next"
+                  label={''}
+                />
+              </View>
+              <View style={{marginTop: 10}}>
+                <Text
+                  style={[
+                    MainStyle.dmSansBold,
+                    {fontSize: 14, color: WHITE},
+                  ]}>
+                  Phone Number
+                </Text>
+              </View>
+              <View>
+                <FloatingTextInput
+                  color="#FFF"
+                  type="text"
+                  refx={q => (this._phoneNumberText = q)}
+                  onSubmitEditing={() => this._passwordText.focus()}
+                  onChangeText={text => this.setState({phone: text})}
+                  value={this.state.phone}
+                  //keyboardType="email-address"
+                  keyboardType={'phone-pad'}
+                  returnKeyType="next"
+                  label={''}
+                />
+              </View>
+              <View style={{marginTop: 10}}>
+                <Text
+                  style={[
+                    MainStyle.dmSansBold,
+                    {fontSize: 14, color: WHITE},
+                  ]}>
+                  Password
+                </Text>
+              </View>
+              <View>
+                <FloatingTextInput
+                  color="#FFF"
+                  type="password"
+                  refx={q => (this._passwordText = q)}
+                  onSubmitEditing={() => {
+                    //Keyboard.dismiss();
+                    this._passwordText2.focus();
+                  }}
+                  onChangeText={text => this.setState({password: text})}
+                  value={this.state.password}
+                  keyboardType="default"
+                  returnKeyType="submit"
+                  label={''}
+                />
+              </View>
+              <View style={{marginTop: 10}}>
+                <Text
+                  style={[
+                    MainStyle.dmSansBold,
+                    {fontSize: 14, color: WHITE},
+                  ]}>
+                  Confirm Password
+                </Text>
+              </View>
+              <View>
+                <FloatingTextInput
+                  color="#FFF"
+                  type="password"
+                  refx={q => (this._passwordText2 = q)}
+                  onSubmitEditing={() => {
+                    Keyboard.dismiss();
+                    //this._phone.focus()
+                  }}
+                  onChangeText={text => this.setState({password2: text})}
+                  value={this.state.password2}
+                  keyboardType="default"
+                  returnKeyType="submit"
+                  label={''}
+                />
+              </View>
+              <View
+                style={{
+                  marginTop: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                }}>
+                <View style={{flex: 1}}>
+                  <Button
+                    onPress={() => {
+                      //Actions.Register();
+                      console.log('Register');
+                    }}>
+                    <View
+                      style={{
+                        backgroundColor: 'rgba(122, 185, 60,0.80)',
+                        borderRadius: 10,
+                        borderWidth: 1,
+                        borderColor: WHITE,
+                        padding: 5,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}>
+                      <Text
+                        style={[
+                          MainStyle.dmSansBold,
+                          {color: WHITE, fontSize: 16},
+                        ]}>
+                        Register
+                      </Text>
+                    </View>
+                  </Button>
+                </View>
+              </View>
+            </View>
+          </ScrollView>
+        </View>
+      </View>
+    );
+  }
+}

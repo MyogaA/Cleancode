@@ -1,0 +1,915 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.beetpos"
+4    android:versionCode="162"
+5    android:versionName="1.2.0.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:6:5-77
+11-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:6:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:3:5-67
+12-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:3:22-64
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:7:5-65
+13-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:7:22-62
+14    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+14-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:8:5-70
+14-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:8:22-68
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:9:5-80
+15-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:9:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:10:5-81
+16-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:10:22-78
+17    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+17-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:11:5-75
+17-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:11:22-72
+18    <!--
+19 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+21    -->
+22    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+22-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:14:5-88
+22-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:14:22-85
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:15:5-79
+23-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:15:22-76
+24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+24-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:17:5-76
+24-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:17:22-73
+25    <uses-permission android:name="android.permission.VIBRATE" />
+25-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:18:5-66
+25-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:18:22-63
+26    <uses-permission android:name="android.permission.READ_CONTACTS" />
+26-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:19:5-72
+26-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:19:22-69
+27    <!--
+28 <uses-permission android:name="android.permission.BBPOS" />
+29    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+30    -->
+31    <uses-permission
+31-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:25:5-95
+32        android:name="android.permission.BLUETOOTH"
+32-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:25:22-65
+33        android:maxSdkVersion="30" />
+33-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:25:66-92
+34    <uses-permission
+34-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:26:5-101
+35        android:name="android.permission.BLUETOOTH_ADMIN"
+35-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:26:22-71
+36        android:maxSdkVersion="30" />
+36-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:26:72-98
+37    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+37-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:30:5-80
+37-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:30:22-78
+38
+39    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Only when targeting Android 12 or higher -->
+39-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:31:5-85
+39-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:31:29-83
+40    <!--
+41 Please make sure you read the following documentation to have a
+42         better understanding of the new permissions.
+43         https://developer.android.com/guide/topics/connectivity/bluetooth/permissions#assert-never-for-location
+44    -->
+45    <!--
+46 If your app doesn't use Bluetooth scan results to derive physical location information,
+47         you can strongly assert that your app
+48         doesn't derive physical location.
+49    -->
+50    <!--
+51 <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" 
+52                     android:usesPermissionFlags="neverForLocation" />
+53    -->
+54    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /> <!-- Needed only if your app looks for Bluetooth devices. -->
+54-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:42:5-76
+54-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:42:22-73
+55    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" /> <!-- Needed only if your app makes the device discoverable to Bluetooth devices. -->
+55-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:44:5-73
+55-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:44:22-70
+56    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+56-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:46:5-78
+56-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:46:22-75
+57    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+57-->[autoreplyprint.aar] /home/myoga/.gradle/caches/transforms-3/926fa3d3376fa920861e44f376716aa8/transformed/jetified-autoreplyprint/AndroidManifest.xml:14:5-79
+57-->[autoreplyprint.aar] /home/myoga/.gradle/caches/transforms-3/926fa3d3376fa920861e44f376716aa8/transformed/jetified-autoreplyprint/AndroidManifest.xml:14:22-76
+58    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+58-->[autoreplyprint.aar] /home/myoga/.gradle/caches/transforms-3/926fa3d3376fa920861e44f376716aa8/transformed/jetified-autoreplyprint/AndroidManifest.xml:18:5-76
+58-->[autoreplyprint.aar] /home/myoga/.gradle/caches/transforms-3/926fa3d3376fa920861e44f376716aa8/transformed/jetified-autoreplyprint/AndroidManifest.xml:18:22-73
+59    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+59-->[autoreplyprint.aar] /home/myoga/.gradle/caches/transforms-3/926fa3d3376fa920861e44f376716aa8/transformed/jetified-autoreplyprint/AndroidManifest.xml:19:5-86
+59-->[autoreplyprint.aar] /home/myoga/.gradle/caches/transforms-3/926fa3d3376fa920861e44f376716aa8/transformed/jetified-autoreplyprint/AndroidManifest.xml:19:22-83
+60    <!--
+61    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+62    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+63
+64    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+65    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+66    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+67
+68    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+69    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+70    -->
+71    <uses-permission android:name="android.hardware.usb.UsbAccessory" />
+71-->[:react-native-bluetooth-escpos-printer] /home/myoga/Documents/beetposnew-main/node_modules/react-native-bluetooth-escpos-printer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-73
+71-->[:react-native-bluetooth-escpos-printer] /home/myoga/Documents/beetposnew-main/node_modules/react-native-bluetooth-escpos-printer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:22-70
+72
+73    <uses-feature
+73-->[:react-native-ble-manager] /home/myoga/Documents/beetposnew-main/node_modules/react-native-ble-manager/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-15:36
+74        android:name="android.hardware.bluetooth_le"
+74-->[:react-native-ble-manager] /home/myoga/Documents/beetposnew-main/node_modules/react-native-ble-manager/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-53
+75        android:required="false" />
+75-->[:react-native-ble-manager] /home/myoga/Documents/beetposnew-main/node_modules/react-native-ble-manager/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-33
+76    <uses-feature
+76-->[:react-native-camera] /home/myoga/Documents/beetposnew-main/node_modules/react-native-camera/android/build/intermediates/merged_manifest/mlkitDebug/AndroidManifest.xml:11:5-13:36
+77        android:name="android.hardware.camera"
+77-->[:react-native-camera] /home/myoga/Documents/beetposnew-main/node_modules/react-native-camera/android/build/intermediates/merged_manifest/mlkitDebug/AndroidManifest.xml:12:9-47
+78        android:required="false" />
+78-->[:react-native-camera] /home/myoga/Documents/beetposnew-main/node_modules/react-native-camera/android/build/intermediates/merged_manifest/mlkitDebug/AndroidManifest.xml:13:9-33
+79    <uses-feature
+79-->[:react-native-camera] /home/myoga/Documents/beetposnew-main/node_modules/react-native-camera/android/build/intermediates/merged_manifest/mlkitDebug/AndroidManifest.xml:14:5-16:36
+80        android:name="android.hardware.camera.autofocus"
+80-->[:react-native-camera] /home/myoga/Documents/beetposnew-main/node_modules/react-native-camera/android/build/intermediates/merged_manifest/mlkitDebug/AndroidManifest.xml:15:9-57
+81        android:required="false" /> <!-- Required to access Google Play Licensing -->
+81-->[:react-native-camera] /home/myoga/Documents/beetposnew-main/node_modules/react-native-camera/android/build/intermediates/merged_manifest/mlkitDebug/AndroidManifest.xml:16:9-33
+82    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+82-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
+82-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
+83    <!--
+84         Required to keep CPU alive while downloading files
+85        (NOT to keep screen awake)
+86    -->
+87    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+87-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:5-68
+87-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:22-65
+88    <permission
+88-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:7:5-9:47
+89        android:name="com.beetpos.permission.C2D_MESSAGE"
+89-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:8:9-63
+90        android:protectionLevel="signature" />
+90-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:9:9-44
+91
+92    <uses-permission android:name="com.beetpos.permission.C2D_MESSAGE" /> <!-- OneSignal SDK has runtime checks Android version. -->
+92-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:11:5-79
+92-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:11:22-76
+93    <!-- <uses-sdk tools:overrideLibrary="android.support.customtabs"/> -->
+94    <!-- Required runtime permission to display notifications on Android 13 -->
+95    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
+95-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:16:5-77
+95-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:16:22-74
+96    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+96-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:18:5-82
+96-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:18:22-79
+97    <!--
+98 Use to restore notifications the user hasn't interacted with.
+99         They could be missed notifications if the user reboots their device if this isn't in place.
+100    -->
+101    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
+101-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:30:5-81
+101-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:30:22-78
+102    <!-- Samsung -->
+103    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+103-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:32:5-86
+103-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:32:22-83
+104    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
+104-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:33:5-87
+104-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:33:22-84
+105    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+105-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:34:5-81
+105-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:34:22-78
+106    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
+106-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:35:5-83
+106-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:35:22-80
+107    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+107-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:36:5-88
+107-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:36:22-85
+108    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
+108-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:37:5-92
+108-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:37:22-89
+109    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
+109-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:38:5-84
+109-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:38:22-81
+110    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
+110-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:39:5-83
+110-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:39:22-80
+111    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+111-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:40:5-91
+111-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:40:22-88
+112    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+112-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:41:5-92
+112-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:41:22-89
+113    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
+113-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:42:5-93
+113-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:42:22-90
+114    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
+114-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:43:5-73
+114-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:43:22-70
+115    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+115-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:44:5-82
+115-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:44:22-79
+116    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
+116-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:45:5-83
+116-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:45:22-80
+117    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+117-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:46:5-88
+117-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:46:22-85
+118    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+118-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:47:5-89
+118-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:47:22-86
+119
+120    <queries>
+120-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:24:5-28:15
+121        <intent>
+121-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:25:9-27:18
+122            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION" />
+122-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:26:13-86
+122-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:26:21-83
+123        </intent>
+124    </queries>
+125
+126    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+126-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
+126-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:22-74
+127    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+127-->[com.android.installreferrer:installreferrer:1.1.2] /home/myoga/.gradle/caches/transforms-3/7506264bbe6f5ca86f9fab028c2af36f/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+127-->[com.android.installreferrer:installreferrer:1.1.2] /home/myoga/.gradle/caches/transforms-3/7506264bbe6f5ca86f9fab028c2af36f/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
+128
+129    <application
+129-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:50:5-69:19
+130        android:name="com.beetpos.MainApplication"
+130-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:51:7-38
+131        android:allowBackup="false"
+131-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:55:7-34
+132        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+132-->[androidx.core:core:1.7.0] /home/myoga/.gradle/caches/transforms-3/9e9eb9de3e304b71a55a69cd19988425/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+133        android:debuggable="true"
+134        android:icon="@mipmap/ic_launcher"
+134-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:53:7-41
+135        android:label="@string/app_name"
+135-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:52:7-39
+136        android:roundIcon="@mipmap/ic_launcher_round"
+136-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:54:7-52
+137        android:theme="@style/AppTheme"
+137-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:56:7-38
+138        android:usesCleartextTraffic="true" >
+138-->/home/myoga/Documents/beetposnew-main/android/app/src/debug/AndroidManifest.xml:8:9-44
+139        <activity
+139-->/home/myoga/Documents/beetposnew-main/android/app/src/debug/AndroidManifest.xml:11:9-111
+140            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+140-->/home/myoga/Documents/beetposnew-main/android/app/src/debug/AndroidManifest.xml:11:19-83
+141            android:exported="false" />
+141-->/home/myoga/Documents/beetposnew-main/android/app/src/debug/AndroidManifest.xml:11:84-108
+142        <activity
+142-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:57:7-68:18
+143            android:name="com.beetpos.MainActivity"
+143-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:58:9-37
+144            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+144-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:60:9-118
+145            android:exported="true"
+145-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:63:9-32
+146            android:label="@string/app_name"
+146-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:59:9-41
+147            android:launchMode="singleTask"
+147-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:61:9-40
+148            android:windowSoftInputMode="adjustResize" >
+148-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:62:9-51
+149            <intent-filter>
+149-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:64:9-67:25
+150                <action android:name="android.intent.action.MAIN" />
+150-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:65:13-65
+150-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:65:21-62
+151
+152                <category android:name="android.intent.category.LAUNCHER" />
+152-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:66:13-73
+152-->/home/myoga/Documents/beetposnew-main/android/app/src/main/AndroidManifest.xml:66:23-70
+153            </intent-filter>
+154        </activity>
+155
+156        <provider
+156-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+157            android:name="com.imagepicker.ImagePickerProvider"
+157-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+158            android:authorities="com.beetpos.imagepickerprovider"
+158-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
+159            android:exported="false"
+159-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+160            android:grantUriPermissions="true" >
+160-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+161            <meta-data
+161-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+162                android:name="android.support.FILE_PROVIDER_PATHS"
+162-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+163                android:resource="@xml/imagepicker_provider_paths" />
+163-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+164        </provider>
+165        <provider
+165-->[:react-native-webview] /home/myoga/Documents/beetposnew-main/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+166            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+166-->[:react-native-webview] /home/myoga/Documents/beetposnew-main/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
+167            android:authorities="com.beetpos.fileprovider"
+167-->[:react-native-webview] /home/myoga/Documents/beetposnew-main/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
+168            android:exported="false"
+168-->[:react-native-webview] /home/myoga/Documents/beetposnew-main/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+169            android:grantUriPermissions="true" >
+169-->[:react-native-webview] /home/myoga/Documents/beetposnew-main/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+170            <meta-data
+170-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+171                android:name="android.support.FILE_PROVIDER_PATHS"
+171-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+172                android:resource="@xml/file_provider_paths" />
+172-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+173        </provider>
+174        <provider
+174-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
+175            android:name="com.RNFetchBlob.Utils.FileProvider"
+175-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
+176            android:authorities="com.beetpos.provider"
+176-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
+177            android:exported="false"
+177-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
+178            android:grantUriPermissions="true" >
+178-->[:rn-fetch-blob] /home/myoga/Documents/beetposnew-main/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
+179            <meta-data
+179-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+180                android:name="android.support.FILE_PROVIDER_PATHS"
+180-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+181                android:resource="@xml/provider_paths" />
+181-->[:react-native-image-picker] /home/myoga/Documents/beetposnew-main/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+182        </provider>
+183
+184        <receiver
+184-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:50:9-61:20
+185            android:name="com.onesignal.FCMBroadcastReceiver"
+185-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:51:13-62
+186            android:exported="true"
+186-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:52:13-36
+187            android:permission="com.google.android.c2dm.permission.SEND" >
+187-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:53:13-73
+188
+189            <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
+190            <intent-filter android:priority="999" >
+190-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:56:13-60:29
+190-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:56:28-50
+191                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+191-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:57:17-81
+191-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:57:25-78
+192
+193                <category android:name="com.beetpos" />
+193-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:59:17-61
+193-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:59:27-58
+194            </intent-filter>
+195        </receiver>
+196
+197        <service
+197-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:63:9-69:19
+198            android:name="com.onesignal.HmsMessageServiceOneSignal"
+198-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:64:13-68
+199            android:exported="false" >
+199-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:65:13-37
+200            <intent-filter>
+200-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:66:13-68:29
+201                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+201-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:67:17-81
+201-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:67:25-78
+202            </intent-filter>
+203        </service>
+204
+205        <activity
+205-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:71:9-79:20
+206            android:name="com.onesignal.NotificationOpenedActivityHMS"
+206-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:72:13-71
+207            android:exported="true"
+207-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:73:13-36
+208            android:noHistory="true"
+208-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:74:13-37
+209            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+209-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:75:13-72
+210            <intent-filter>
+210-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:76:13-78:29
+211                <action android:name="android.intent.action.VIEW" />
+211-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:77:17-69
+211-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:77:25-66
+212            </intent-filter>
+213        </activity>
+214
+215        <service
+215-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:81:9-83:40
+216            android:name="com.onesignal.FCMIntentService"
+216-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:82:13-58
+217            android:exported="false" />
+217-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:83:13-37
+218        <service
+218-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:84:9-87:72
+219            android:name="com.onesignal.FCMIntentJobService"
+219-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:85:13-61
+220            android:exported="false"
+220-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:86:13-37
+221            android:permission="android.permission.BIND_JOB_SERVICE" />
+221-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:87:13-69
+222        <service
+222-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:88:9-91:43
+223            android:name="com.onesignal.SyncService"
+223-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:89:13-53
+224            android:exported="false"
+224-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:90:13-37
+225            android:stopWithTask="true" />
+225-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:91:13-40
+226        <service
+226-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:92:9-95:72
+227            android:name="com.onesignal.SyncJobService"
+227-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:93:13-56
+228            android:exported="false"
+228-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:94:13-37
+229            android:permission="android.permission.BIND_JOB_SERVICE" />
+229-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:95:13-69
+230
+231        <activity
+231-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:97:9-100:75
+232            android:name="com.onesignal.PermissionsActivity"
+232-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:98:13-61
+233            android:exported="false"
+233-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:99:13-37
+234            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+234-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:100:13-72
+235
+236        <receiver
+236-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:102:9-104:39
+237            android:name="com.onesignal.NotificationDismissReceiver"
+237-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:103:13-69
+238            android:exported="true" />
+238-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:104:13-36
+239        <receiver
+239-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:105:9-112:20
+240            android:name="com.onesignal.BootUpReceiver"
+240-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:106:13-56
+241            android:exported="true" >
+241-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:107:13-36
+242            <intent-filter>
+242-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:108:13-111:29
+243                <action android:name="android.intent.action.BOOT_COMPLETED" />
+243-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:109:17-79
+243-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:109:25-76
+244                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+244-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:110:17-82
+244-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:110:25-79
+245            </intent-filter>
+246        </receiver>
+247        <receiver
+247-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:113:9-119:20
+248            android:name="com.onesignal.UpgradeReceiver"
+248-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:114:13-57
+249            android:exported="true" >
+249-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:115:13-36
+250            <intent-filter>
+250-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:116:13-118:29
+251                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+251-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:117:17-84
+251-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:117:25-81
+252            </intent-filter>
+253        </receiver>
+254
+255        <activity
+255-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:121:9-127:75
+256            android:name="com.onesignal.NotificationOpenedReceiver"
+256-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:122:13-68
+257            android:excludeFromRecents="true"
+257-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:123:13-46
+258            android:exported="true"
+258-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:124:13-36
+259            android:noHistory="true"
+259-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:125:13-37
+260            android:taskAffinity=""
+260-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:126:13-36
+261            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+261-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:127:13-72
+262        <activity
+262-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:128:9-133:75
+263            android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder"
+263-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:129:13-85
+264            android:excludeFromRecents="true"
+264-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:130:13-46
+265            android:exported="true"
+265-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:131:13-36
+266            android:noHistory="true"
+266-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:132:13-37
+267            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+267-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:133:13-72
+268
+269        <receiver
+269-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
+270            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+270-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
+271            android:exported="true"
+271-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
+272            android:permission="com.google.android.c2dm.permission.SEND" >
+272-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
+273            <intent-filter>
+273-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:32:13-34:29
+274                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+274-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:57:17-81
+274-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:57:25-78
+275            </intent-filter>
+276        </receiver>
+277        <!--
+278             FirebaseMessagingService performs security checks at runtime,
+279             but set to not exported to explicitly avoid allowing another app to call it.
+280        -->
+281        <service
+281-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
+282            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+282-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
+283            android:directBootAware="true"
+283-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
+284            android:exported="false" >
+284-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
+285            <intent-filter android:priority="-500" >
+285-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:45:13-47:29
+285-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:45:28-51
+286                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+286-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:46:17-78
+286-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:46:25-75
+287            </intent-filter>
+288        </service>
+289        <service
+289-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
+290            android:name="com.google.firebase.components.ComponentDiscoveryService"
+290-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:50:13-84
+291            android:directBootAware="true"
+291-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+292            android:exported="false" >
+292-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
+293            <meta-data
+293-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
+294                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+294-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
+295                android:value="com.google.firebase.components.ComponentRegistrar" />
+295-->[com.google.firebase:firebase-messaging:22.0.0] /home/myoga/.gradle/caches/transforms-3/90085e5a86d5c6aeb1903a4aee4c7c36/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
+296            <meta-data
+296-->[com.google.firebase:firebase-datatransport:18.0.0] /home/myoga/.gradle/caches/transforms-3/aef7eebd4e668ed5236a62fb3f1cde03/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
+297                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+297-->[com.google.firebase:firebase-datatransport:18.0.0] /home/myoga/.gradle/caches/transforms-3/aef7eebd4e668ed5236a62fb3f1cde03/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
+298                android:value="com.google.firebase.components.ComponentRegistrar" />
+298-->[com.google.firebase:firebase-datatransport:18.0.0] /home/myoga/.gradle/caches/transforms-3/aef7eebd4e668ed5236a62fb3f1cde03/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
+299            <meta-data
+299-->[com.google.firebase:firebase-installations:17.0.0] /home/myoga/.gradle/caches/transforms-3/42fd55319ad4d3eb8f1c2efd5a8a6c3b/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+300                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+300-->[com.google.firebase:firebase-installations:17.0.0] /home/myoga/.gradle/caches/transforms-3/42fd55319ad4d3eb8f1c2efd5a8a6c3b/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+301                android:value="com.google.firebase.components.ComponentRegistrar" />
+301-->[com.google.firebase:firebase-installations:17.0.0] /home/myoga/.gradle/caches/transforms-3/42fd55319ad4d3eb8f1c2efd5a8a6c3b/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+302        </service>
+303
+304        <uses-library
+304-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:31:9-33:40
+305            android:name="androidx.camera.extensions.impl"
+305-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:32:13-59
+306            android:required="false" />
+306-->[androidx.camera:camera-extensions:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/119709755d9190e448d4e30129c7035b/transformed/jetified-camera-extensions-1.1.0-beta02/AndroidManifest.xml:33:13-37
+307
+308        <service
+308-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:26:9-35:19
+309            android:name="androidx.camera.core.impl.MetadataHolderService"
+309-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:27:13-75
+310            android:enabled="false"
+310-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:28:13-36
+311            android:exported="false" >
+311-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:29:13-37
+312            <meta-data
+312-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:32:13-34:89
+313                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+313-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:33:17-103
+314                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+314-->[androidx.camera:camera-camera2:1.1.0-beta02] /home/myoga/.gradle/caches/transforms-3/abc11dea46bb73c5730a6783fd2e18d6/transformed/jetified-camera-camera2-1.1.0-beta02/AndroidManifest.xml:34:17-86
+315        </service>
+316
+317        <provider
+317-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
+318            android:name="androidx.startup.InitializationProvider"
+318-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:32:13-67
+319            android:authorities="com.beetpos.androidx-startup"
+319-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:33:13-68
+320            android:exported="false" >
+320-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:34:13-37
+321            <meta-data
+321-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+322                android:name="androidx.work.WorkManagerInitializer"
+322-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+323                android:value="androidx.startup" />
+323-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+324            <meta-data
+324-->[androidx.emoji2:emoji2:1.0.0] /home/myoga/.gradle/caches/transforms-3/3357f90e76a570822bc94e48519d9a2a/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+325                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+325-->[androidx.emoji2:emoji2:1.0.0] /home/myoga/.gradle/caches/transforms-3/3357f90e76a570822bc94e48519d9a2a/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+326                android:value="androidx.startup" />
+326-->[androidx.emoji2:emoji2:1.0.0] /home/myoga/.gradle/caches/transforms-3/3357f90e76a570822bc94e48519d9a2a/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+327            <meta-data
+327-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/myoga/.gradle/caches/transforms-3/23313cd9810e18cf6dd91f76c0103178/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+328                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+328-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/myoga/.gradle/caches/transforms-3/23313cd9810e18cf6dd91f76c0103178/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+329                android:value="androidx.startup" />
+329-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/myoga/.gradle/caches/transforms-3/23313cd9810e18cf6dd91f76c0103178/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+330        </provider>
+331
+332        <service
+332-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+333            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+333-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+334            android:directBootAware="false"
+334-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+335            android:enabled="@bool/enable_system_alarm_service_default"
+335-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+336            android:exported="false" />
+336-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+337        <service
+337-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+338            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+338-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+339            android:directBootAware="false"
+339-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+340            android:enabled="@bool/enable_system_job_service_default"
+340-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+341            android:exported="true"
+341-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+342            android:permission="android.permission.BIND_JOB_SERVICE" />
+342-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+343        <service
+343-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+344            android:name="androidx.work.impl.foreground.SystemForegroundService"
+344-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+345            android:directBootAware="false"
+345-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+346            android:enabled="@bool/enable_system_foreground_service_default"
+346-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+347            android:exported="false" />
+347-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+348
+349        <receiver
+349-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+350            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+350-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+351            android:directBootAware="false"
+351-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+352            android:enabled="true"
+352-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+353            android:exported="false" />
+353-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+354        <receiver
+354-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+355            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+355-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+356            android:directBootAware="false"
+356-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+357            android:enabled="false"
+357-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+358            android:exported="false" >
+358-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+359            <intent-filter>
+359-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+360                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+360-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+360-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+361                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+361-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+361-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+362            </intent-filter>
+363        </receiver>
+364        <receiver
+364-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+365            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+365-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+366            android:directBootAware="false"
+366-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+367            android:enabled="false"
+367-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+368            android:exported="false" >
+368-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+369            <intent-filter>
+369-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+370                <action android:name="android.intent.action.BATTERY_OKAY" />
+370-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+370-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+371                <action android:name="android.intent.action.BATTERY_LOW" />
+371-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+371-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+372            </intent-filter>
+373        </receiver>
+374        <receiver
+374-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+375            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+375-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+376            android:directBootAware="false"
+376-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+377            android:enabled="false"
+377-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+378            android:exported="false" >
+378-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+379            <intent-filter>
+379-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+380                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+380-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+380-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+381                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+381-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+381-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+382            </intent-filter>
+383        </receiver>
+384        <receiver
+384-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+385            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+385-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+386            android:directBootAware="false"
+386-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+387            android:enabled="false"
+387-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+388            android:exported="false" >
+388-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+389            <intent-filter>
+389-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+390                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+390-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+390-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+391            </intent-filter>
+392        </receiver>
+393        <receiver
+393-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+394            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+394-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+395            android:directBootAware="false"
+395-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+396            android:enabled="false"
+396-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+397            android:exported="false" >
+397-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+398            <intent-filter>
+398-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+399                <action android:name="android.intent.action.BOOT_COMPLETED" />
+399-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:109:17-79
+399-->[com.onesignal:OneSignal:4.8.2] /home/myoga/.gradle/caches/transforms-3/00c1d007b02558b140aa1f351e013c58/transformed/jetified-OneSignal-4.8.2/AndroidManifest.xml:109:25-76
+400                <action android:name="android.intent.action.TIME_SET" />
+400-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+400-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+401                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+401-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+401-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+402            </intent-filter>
+403        </receiver>
+404        <receiver
+404-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+405            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+405-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+406            android:directBootAware="false"
+406-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+407            android:enabled="@bool/enable_system_alarm_service_default"
+407-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+408            android:exported="false" >
+408-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+409            <intent-filter>
+409-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+410                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+410-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+410-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+411            </intent-filter>
+412        </receiver>
+413        <receiver
+413-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+414            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+414-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+415            android:directBootAware="false"
+415-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+416            android:enabled="true"
+416-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+417            android:exported="true"
+417-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+418            android:permission="android.permission.DUMP" >
+418-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+419            <intent-filter>
+419-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+420                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+420-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+420-->[androidx.work:work-runtime:2.7.1] /home/myoga/.gradle/caches/transforms-3/8f0a60080fc68a81e8e59300c94e864f/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+421            </intent-filter>
+422        </receiver>
+423
+424        <service
+424-->[androidx.room:room-runtime:2.2.5] /home/myoga/.gradle/caches/transforms-3/679a498f9f511b2b592c047bc9e9e581/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+425            android:name="androidx.room.MultiInstanceInvalidationService"
+425-->[androidx.room:room-runtime:2.2.5] /home/myoga/.gradle/caches/transforms-3/679a498f9f511b2b592c047bc9e9e581/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+426            android:directBootAware="true"
+426-->[androidx.room:room-runtime:2.2.5] /home/myoga/.gradle/caches/transforms-3/679a498f9f511b2b592c047bc9e9e581/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+427            android:exported="false" />
+427-->[androidx.room:room-runtime:2.2.5] /home/myoga/.gradle/caches/transforms-3/679a498f9f511b2b592c047bc9e9e581/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+428        <service
+428-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/myoga/.gradle/caches/transforms-3/91821f5de888a906cf77aa0160cb17c6/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:9:9-15:19
+429            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+429-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/myoga/.gradle/caches/transforms-3/91821f5de888a906cf77aa0160cb17c6/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:10:13-91
+430            android:directBootAware="true"
+430-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
+431            android:exported="false" >
+431-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/myoga/.gradle/caches/transforms-3/91821f5de888a906cf77aa0160cb17c6/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:11:13-37
+432            <meta-data
+432-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/myoga/.gradle/caches/transforms-3/91821f5de888a906cf77aa0160cb17c6/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
+433                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+433-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/myoga/.gradle/caches/transforms-3/91821f5de888a906cf77aa0160cb17c6/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
+434                android:value="com.google.firebase.components.ComponentRegistrar" />
+434-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/myoga/.gradle/caches/transforms-3/91821f5de888a906cf77aa0160cb17c6/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
+435            <meta-data
+435-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /home/myoga/.gradle/caches/transforms-3/ad23cbd299b80b95dd42941ea3f3b614/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
+436                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+436-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /home/myoga/.gradle/caches/transforms-3/ad23cbd299b80b95dd42941ea3f3b614/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
+437                android:value="com.google.firebase.components.ComponentRegistrar" />
+437-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /home/myoga/.gradle/caches/transforms-3/ad23cbd299b80b95dd42941ea3f3b614/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
+438            <meta-data
+438-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /home/myoga/.gradle/caches/transforms-3/232cba678956bfdeb72c0f5211331358/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
+439                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+439-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /home/myoga/.gradle/caches/transforms-3/232cba678956bfdeb72c0f5211331358/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
+440                android:value="com.google.firebase.components.ComponentRegistrar" />
+440-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /home/myoga/.gradle/caches/transforms-3/232cba678956bfdeb72c0f5211331358/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
+441            <meta-data
+441-->[com.google.mlkit:vision-common:16.5.0] /home/myoga/.gradle/caches/transforms-3/01afbfcea0b6269c3ce3b5016464ddb4/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
+442                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+442-->[com.google.mlkit:vision-common:16.5.0] /home/myoga/.gradle/caches/transforms-3/01afbfcea0b6269c3ce3b5016464ddb4/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
+443                android:value="com.google.firebase.components.ComponentRegistrar" />
+443-->[com.google.mlkit:vision-common:16.5.0] /home/myoga/.gradle/caches/transforms-3/01afbfcea0b6269c3ce3b5016464ddb4/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
+444            <meta-data
+444-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
+445                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+445-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
+446                android:value="com.google.firebase.components.ComponentRegistrar" />
+446-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
+447        </service>
+448
+449        <provider
+449-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
+450            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+450-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
+451            android:authorities="com.beetpos.mlkitinitprovider"
+451-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
+452            android:exported="false"
+452-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
+453            android:initOrder="99" />
+453-->[com.google.mlkit:common:17.2.0] /home/myoga/.gradle/caches/transforms-3/499f42ca136160ba6a2d84924488749b/transformed/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
+454
+455        <activity
+455-->[com.google.android.gms:play-services-base:18.0.1] /home/myoga/.gradle/caches/transforms-3/1c99693c02131390369175311b40c501/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+456            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+456-->[com.google.android.gms:play-services-base:18.0.1] /home/myoga/.gradle/caches/transforms-3/1c99693c02131390369175311b40c501/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+457            android:exported="false"
+457-->[com.google.android.gms:play-services-base:18.0.1] /home/myoga/.gradle/caches/transforms-3/1c99693c02131390369175311b40c501/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+458            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+458-->[com.google.android.gms:play-services-base:18.0.1] /home/myoga/.gradle/caches/transforms-3/1c99693c02131390369175311b40c501/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+459
+460        <provider
+460-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+461            android:name="com.google.firebase.provider.FirebaseInitProvider"
+461-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+462            android:authorities="com.beetpos.firebaseinitprovider"
+462-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+463            android:directBootAware="true"
+463-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+464            android:exported="false"
+464-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+465            android:initOrder="100" />
+465-->[com.google.firebase:firebase-common:20.0.0] /home/myoga/.gradle/caches/transforms-3/68932db18156ceb082c0301735658e57/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+466
+467        <meta-data
+467-->[com.google.android.gms:play-services-basement:18.0.0] /home/myoga/.gradle/caches/transforms-3/d46ac13fd4319445d13278e05b4ac3c3/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+468            android:name="com.google.android.gms.version"
+468-->[com.google.android.gms:play-services-basement:18.0.0] /home/myoga/.gradle/caches/transforms-3/d46ac13fd4319445d13278e05b4ac3c3/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+469            android:value="@integer/google_play_services_version" />
+469-->[com.google.android.gms:play-services-basement:18.0.0] /home/myoga/.gradle/caches/transforms-3/d46ac13fd4319445d13278e05b4ac3c3/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+470
+471        <service
+471-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/myoga/.gradle/caches/transforms-3/fe29d63bfda56bbde27ec40b329a9389/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+472            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+472-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/myoga/.gradle/caches/transforms-3/fe29d63bfda56bbde27ec40b329a9389/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+473            android:exported="false" >
+473-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/myoga/.gradle/caches/transforms-3/fe29d63bfda56bbde27ec40b329a9389/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+474            <meta-data
+474-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/myoga/.gradle/caches/transforms-3/fe29d63bfda56bbde27ec40b329a9389/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+475                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+475-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/myoga/.gradle/caches/transforms-3/fe29d63bfda56bbde27ec40b329a9389/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+476                android:value="cct" />
+476-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/myoga/.gradle/caches/transforms-3/fe29d63bfda56bbde27ec40b329a9389/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+477        </service>
+478        <service
+478-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+479            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+479-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+480            android:exported="false"
+480-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+481            android:permission="android.permission.BIND_JOB_SERVICE" >
+481-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+482        </service>
+483
+484        <receiver
+484-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+485            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+485-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+486            android:exported="false" />
+486-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/myoga/.gradle/caches/transforms-3/9129ff2e288467fbaad2bab32b10dede/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+487    </application>
+488
+489</manifest>

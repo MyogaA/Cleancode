@@ -1,0 +1,30 @@
+{
+	"primaryColor": {
+		"bg": "#0076cb",
+		"color": "#ffffff"
+	},
+	"primaryColorLight": {
+		"bg": "#199FFF",
+		"color": "#ffffff"
+	},
+	"primaryColorDark": {
+		"bg": "#004A7E",
+		"color": "#ffffff"
+	},
+	"secondaryColor": {
+		"bg": "#FFA31C",
+		"color": "#ffffff"
+	},
+	"secondaryColorLight": {
+		"bg": "#FFAD35",
+		"color": "#ffffff"
+	},
+	"secondaryColorDark": {
+		"bg": "#B26E0A",
+		"color": "#ffffff"
+	},
+	"greyColor": {
+		"bg": "#f5f5f5",
+		"color": "#777"
+	}
+}
